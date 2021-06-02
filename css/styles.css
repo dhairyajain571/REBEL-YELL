@@ -639,7 +639,7 @@ input {
 	background-color: linear-gradient(to left,#444242, #a2a2a2,#424242);
 }
 .strip{
-	width: 50%;
+	width: 100%;
 	margin-left: 25%;
 	margin-right: 25%;
 	background-color: black;
