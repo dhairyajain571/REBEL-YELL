@@ -45,11 +45,11 @@
             <a class="navbar-brand" href="#"><img src="images/logo.png" height="100" width="100">REBEL YELL</a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active "><a class="nav-link" href="index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item  "><a class="nav-link" href="index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
                     
                     <li class="nav-item "><a class="nav-link" href="games.html"><span class="fa fa-gamepad fa-lg"></span> Games</a></li>
                      <li class="nav-item"><a class="nav-link" href="./organize.html"><span class="fa fa-users fa-lg"></span> Organize</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                    <li class="nav-item active "><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
                 </ul>
                 <span class="navbar-text">
@@ -60,7 +60,7 @@
             </div>
         </nav>
 
-        <header class="jumbotron" style="background-color: rgb(50, 0, 70);" >
+        <header class="jumbotron" style="background-color: rgb(50, 0, 70); padding-top: 200px;" >
             <div class="container">
 
                 <div class="row row-header">
@@ -87,7 +87,7 @@
 
         <div class="row row-content">
             <div class="col-12">
-                <h3>Location Information</h3>
+                <h3 style="padding-left: 15px;">Location Information</h3>
             </div>
             <div class="col-12 col-sm-4 offset-sm-1">
                 <h5>Our Address</h5>
@@ -102,8 +102,8 @@
                 </address>
             </div>
             <div class="col-12 col-sm-6 offset-sm-1">
-                <h5>Map of our Location</h5>
-                <div id="googleMap" style="width: 80%;height:400px;"></div>
+            <h5>Map of our Location</h5>
+            <div id="googleMap" style="width: 80%;height:400px;"></div>
 
             <script>
              function myMap() {
@@ -119,83 +119,104 @@
             </div>
             <div class="col-12 col-sm-11 offset-sm-1">
                 <div class="btn-group" role="group">
-                    <a role="button" class=" btn-primary" href="tel:+85212345678"><i class="fa fa-phone"></i> Call</a>
-                    <a role="button" class=" btn-info"><i class="fa fa-skype"></i> Skype</a>
-                    <a role="button" class=" btn-success" href="mailto:confusion@food.net"><i class="fa fa-envelope-o"></i> Email</a>
+                    <a role="button" class=" btn-primary" href="tel:+85212345678" style="width: 100px; height: 60px; text-align: center; font-size: larger; "><i class="fa fa-phone"></i> Call</a>
+                    <a role="button" class=" btn-info" style="width: 100px; height: 60px; text-align: center; font-size: larger; "><i class="fa fa-skype"></i> Skype</a>
+                    <a role="button" class=" btn-success" href="mailto:confusion@food.net" style="width: 100px; height: 60px; text-align: center; font-size: larger;"><i class="fa fa-envelope-o"></i> Email</a>
                 </div>
             </div>
         </div>
+        <div class="container" style="padding-top: 100px; padding-bottom: 100px;">
+            <form>
+              <div class="row">
+                <h4>Send Feedback</h4>
+                <div class="input-group input-group-icon">
+                  <input type="text" placeholder=" Name"/>
+                  <div class="input-icon"><i class="fa fa-user"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                  <input type="email" placeholder="Email Adress"/>
+                  <div class="input-icon"><i class="fa fa-envelope"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    
+                  <input type="number" placeholder="contact no."/>
+                  <div class="input-icon"><i class="fa fa-address-card"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="title"/>
+                    <textarea class="form-control" id="feedback" name="feedback" rows="12"></textarea>
+                    <div class="input-icon"><i class="fa fa-file"></i></div>
+                </div>
+                <div class="input-group">
+                    <input id="response" type="checkbox"/>
+                    <label for="response">Send me a copy of response.</label>
+                  </div>
+            
+                <h4>Terms and Conditions</h4>
+                <div class="input-group">
+                  <input id="terms" type="checkbox"/>
+                  <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
+                </div>
+              </div>
+              <div class="col-12 col-sm align-self-center" style="text-align: center;">
+                <a data-toggle="modal" data-target="#loginModal"id="buttonReservation" type="button" class=" btn-warning btn-sm btn-block"  role="button" style="background-color: blueviolet; color: #ffff; font-weight: bolder; font-size: larger;">Send Feedback</a>
+              </div>
+            </form>
+          </div>
 
-        <div class="row row-content">
-            <div class="col-12">
-                <h3>Send us your Feedback</h3>
+          <div id="loginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+               <div class="modal-content">
+                
+                  <div class="containers" id="containers">
+                    <div class="form-container sign-up-container">
+                      <form action="#">
+                        <h1>Create Account</h1>
+                        <div class="social-container">
+                          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <span>or use your email for registration</span>
+                        <input type="text" placeholder="Name" />
+                        <input type="email" placeholder="Email" />
+                        <input type="password" placeholder="Password" />
+                        <button>Sign Up</button>
+                      </form>
+                    </div>
+                    <div class="form-container sign-in-container">
+                      <form action="#">
+                        <h1>Sign in</h1>
+                        <div class="social-container">
+                          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <span>or use your account</span>
+                        <input type="email" placeholder="Email" />
+                        <input type="password" placeholder="Password" />
+                        <a href="#">Forgot your password?</a>
+                        <button>Sign In</button>
+                      </form>
+                    </div>
+                    <div class="overlay-container">
+                      <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                          <h1>Welcome Back!</h1>
+                          <p>To keep connected with us please login with your personal info</p>
+                          <button class="ghost" id="signIn">Sign In</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                          <h1>Hello, Friend!</h1>
+                          <p>Enter your personal details and start journey with us</p>
+                          <button class="ghost" id="signUp">Sign Up</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
-            <div class="col-12 col-md-9">
-                <form>
-                    <div class="form-group row">
-                        <label for="firstname" class="col-md-2 col-form-label">First Name</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="lastname" class="col-md-2 col-form-label">Last Name</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="telnum" class="col-12 col-md-2 col-form-label">Contact Tel.</label>
-                        <div class="col-5 col-sm-4 col-md-3">
-                            <div class="input-group">
-                                <div class="input-group-addon"></div>
-                                <input type="tel" class="form-control" id="areacode" name="areacode" placeholder="Area code">
-                                <div class="input-group-addon"></div>
-                            </div>
-                        </div>
-                        <div class="col-7 col-sm-6 col-md-7">
-                            <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Tel. number">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="emailid" class="col-md-2 col-form-label">Email</label>
-                        <div class="col-md-10">
-                            <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="form-check col-md-6 offset-md-2">
-                            <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" name="approve" value="">
-                                <strong>May we contact you?</strong>
-                            </label>
-                        </div>
-                        <div class="col-md-3 offset-md-1">
-                            <select class="form-control">
-                                <option>Tel.</option>
-                                <option>Email</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
-                        <div class="col-md-10">
-                            <textarea class="form-control" id="feedback" name="feedback" rows="12"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="offset-md-2 col-md-10">
-                            <button type="submit" class="btn btn-primary">Send Feedback</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-12 col-md">
-            </div>
-        </div>
-
-    </div>
-
+          </div>
     <footer class="footer">
         <div >
             <div class="row">
