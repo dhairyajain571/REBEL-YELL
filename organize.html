@@ -78,24 +78,32 @@
                     <div class="input-group input-group-icon">
                         
                       <input type="number" placeholder="Number Of Players (2-100)"/>
-                      <div class="input-icon"><i class="fa fa-key"></i></div>
+                      <div class="input-icon"><i class="fa fa-users"></i></div>
                     </div>
                   </div>
+                  
                   <div class="row">
-                    <div class="col-half">
-                      <h4>Date of Tournament</h4>
-                      <div class="input-group">
-                        <div class="col-third">
-                          <input type="text" placeholder="DD"/>
-                        </div>
-                        <div class="col-third">
-                          <input type="text" placeholder="MM"/>
-                        </div>
-                        <div class="col-third">
-                          <input type="text" placeholder="YYYY"/>
-                        </div>
-                      </div>
+                    <div class="input-group input-group-icon">
+                        
+                      <input type="date" placeholder="Number Of Players (2-100)"/>
+                      <div class="input-icon"><i class="fa fa-calendar"></i></div>
                     </div>
+                    <div class="input-group">
+                      <select>
+                        <option>Select Game</option>
+                        <option>Valorant</option>
+                        <option>PUBG</option>
+                        <option>CS:GO</option>
+                        <option>COD</option>
+                        <option>COD MOBILE</option>
+                      </select>
+                      <select>
+                        <option>SELECT DEVICE</option>
+                        <option>MOBILE</option>
+                        <option>PC</option>
+                        <option>Others</option>
+                      </select>
+                    </div>                    
                     <div class="col-half">
                       <h4>Prize Pool</h4>
                       <div class="input-group">
@@ -106,22 +114,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="input-group">
-                    <select>
-                      <option>Select Game</option>
-                      <option>Valorant</option>
-                      <option>PUBG</option>
-                      <option>CS:GO</option>
-                      <option>COD</option>
-                      <option>COD MOBILE</option>
-                    </select>
-                    <select>
-                      <option>SELECT DEVICE</option>
-                      <option>MOBILE</option>
-                      <option>PC</option>
-                      <option>Others</option>
-                    </select>
-                  </div>
+                  
                   <div class="row">
                     <h4>Payment Details</h4>
                     <div class="input-group">
@@ -140,18 +133,12 @@
                         <div class="input-icon"><i class="fa fa-user"></i></div>
                       </div>
                     </div>
-                    <div class="col-half">
-                      <div class="input-group">
-                        <select>
-                          <option>01 Jan</option>
-                          <option>02 Jan</option>
-                        </select>
-                        <select>
-                          <option>2015</option>
-                          <option>2016</option>
-                        </select>
-                      </div>
+                    <div class="input-group input-group-icon">
+                        
+                      <input type="month" aria-placeholder="exp date"/>
+                      <div class="input-icon"><i class="fa fa-calendar"></i></div>
                     </div>
+                   
                   </div>
                   <div class="row">
                     <h4>Terms and Conditions</h4>
@@ -159,6 +146,9 @@
                       <input id="terms" type="checkbox"/>
                       <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
                     </div>
+                  </div>
+                  <div class="col-12 col-sm align-self-center" style="text-align: center;">
+                    <a data-toggle="modal" data-target="#loginModal"id="buttonReservation" type="button" class=" btn-warning btn-sm btn-block"  role="button" style="background-color: blueviolet; color: #ffff; font-weight: bolder; font-size: larger;">ORGANIZE</a>
                   </div>
                 </form>
               </div>
