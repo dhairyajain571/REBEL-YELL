@@ -4,34 +4,52 @@
 <head>
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="shortcut icon" type="img/png" href="./images/logo.png">
-    <!-- build:css css/main.css -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap-social.css">
-    <link href="css/cstyle.css" rel="stylesheet">
-    <!-- endbuild -->
-
-    <title>Ristorante Con Fusion: About Us</title>
-
+     
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css">
+    <link rel="shortcut icon" type="img/png" href="./images/logo.png" style="height: max-content;">
+    <title>REBEL YELL</title>
 </head>
 
-<body>
-    <nav class="navbar navbar-light navbar-inverse navbar-expand-md navbar-toggleable-sm fixed-top">
+<style>[data-columns]::before{visibility:hidden;position:absolute;font-size:1px;}</style><script type="text/javascript" charset="UTF-8" src="http://maps.google.com/maps-api-v3/api/js/38/7/common.js"></script><script type="text/javascript" charset="UTF-8" src="http://maps.google.com/maps-api-v3/api/js/38/7/util.js"></script></head>
+
+<body class="animation-area">
+    
+        <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <!-- PRELOADING -->
+    <div id="preload" style="display: none;">
+        <div class="preload">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!--NAVBAR-->
+    <nav class="navbar navbar-dark navbar-inverse navbar-expand-md navbar-toggleable-sm fixed-top">
         <div class="container">
            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="images/logo.png" height="30" width="41">EVENT INNOVATORS</a>
+            <a class="navbar-brand" href="#"><img src="images/logo.png" height="100" width="100">REBEL YELL</a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item "><a class="nav-link" href="index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item active "><a class="nav-link" href="index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
                     
                     <li class="nav-item "><a class="nav-link" href="games.html"><span class="fa fa-gamepad fa-lg"></span> Games</a></li>
                      <li class="nav-item"><a class="nav-link" href="./organize.html"><span class="fa fa-users fa-lg"></span> Organize</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
                 </ul>
                 <span class="navbar-text">
@@ -42,33 +60,28 @@
             </div>
         </nav>
 
-        <header class="jumbotron">
+        <header class="jumbotron" style="background-color: rgb(50, 0, 70);" >
             <div class="container">
-    
+
                 <div class="row row-header">
-                    <div class="col-12 col-sm-6">
+                    <div class="col-12 col-sm-6 col-xs-4">
                         <h1>The Esports Technology to Engage Your Players with Competitions</h1>
                         <p>From communities to game publishers, thousands of organizers trust Event Innovators to organize their esports tournaments </p>
                     </div>
                     <div class="col col-sm align-self-center" style="text-align: center;">
-                        <img src="images/cover.png" class="img-fluid">
+                        <img src="images/logo.png" class="img-fluid">
                     </div>
                     <div class="col-12 col-sm align-self-center" style="text-align: center;">
-                        <a data-toggle="modal" data-target="#reservationFormModal"id="buttonReservation" type="button" class=" btn-warning btn-sm btn-block" role="button">Get Started</a>
+                        <a data-toggle="modal" data-target="#loginModal"id="buttonReservation" type="button" class=" btn-warning btn-sm btn-block" role="button">Get Started</a>
                     </div>
                 </div>
             </div>
-    </header>
+         </header>
 
-    <div >
+    <div class="container" >
         <div class="row">
-            <ol class="col-12 breadcrumb">
-                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                <li class="breadcrumb-item active">Contact Us</li>
-            </ol>
-            <div class="col-12">
-                <h3>Contact Us</h3>
-                <hr>
+            <h3>Contact Us</h3>
+             <hr>
             </div>
         </div>
 
@@ -90,6 +103,19 @@
             </div>
             <div class="col-12 col-sm-6 offset-sm-1">
                 <h5>Map of our Location</h5>
+                <div id="googleMap" style="width: 80%;height:400px;"></div>
+
+            <script>
+             function myMap() {
+             var mapProp= {
+             center:new google.maps.LatLng(26.7685698,75.8485264),
+             zoom:5,
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+            }
+            </script>
+
+           <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfhNULe-x_MEj_62p30UIwNzYz9Vwphxk&callback=myMap"></script>
             </div>
             <div class="col-12 col-sm-11 offset-sm-1">
                 <div class="btn-group" role="group">
@@ -171,53 +197,56 @@
     </div>
 
     <footer class="footer">
-        <div class="container">
+        <div >
             <div class="row">
                 <div class="col-5 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="#">Home</a></li>
                         <li><a href="./aboutus.html">About</a></li>
                         <li><a href="#">Menu</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="./contactus.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-6 col-sm-5">
+                <div class="col-6 col-sm-5 zz">
                     <h5>Our Address</h5>
                     <address>
-                        121, Clear Water Bay Road<br>
-                        Clear Water Bay, Kowloon<br>
-                        HONG KONG<br>
-                        <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
-                        <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
-                        <i class="fa fa-envelope fa-lg"></i>:
-                        <a href="mailto:confusion@food.net">confusion@food.net</a>
+                        Moti Path Rajat Path <br>
+                        MANSAROVAR , JAIPUR<br>
+                        INDIA<br>
+                        <i class="fa fa-phone fa-lg num"></i>: +91 6350617329<br>
+                        <i class="fa fa-fax fa-lg num"></i>: +91 7742954659<br>
+                        <i class="fa fa-envelope fa-lg"></i>: <a href="eventinnovators.dda@gmail.com">eventinnovators.dda@gmail.com</a>
                     </address>
                 </div>
-                <div class="col-sm align-self-center">
+                <div class="col col-sm-4 align-self-center">
                     <div style="text-align:center">
-                        <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
-                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
-                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
-                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
-                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                        <ul>
+                       <li><a class=" btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a></li> 
+                       <li><a class=" btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a></li> 
+                        <li><a class=" btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a></li>
+                       <li><a class=" btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li> 
+                      <li><a class=" btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a></li>  
+                       <li><a class=" btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a></li> 
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-auto">
-                    <p>© Copyright 2015 Ristorante Con Fusion</p>
+                    <p>© Copyright 2020 Event Innovators</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- build:js js/main.js -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/tether/dist/js/tether.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+  <!-- build:js js/main.js -->
+  <script src="./css/jquery.min.js"></script>
+          
+  <script src="./css/bootstrap.min.js"></script>
+
+  <script src="./main.js"></script>
+  <!-- endbuild -->
     <!-- endbuild --> 
 </body>
 
